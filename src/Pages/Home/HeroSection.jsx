@@ -16,7 +16,7 @@
                      drive project success. Committed to continuous learning and excellence, they tackle challenges head-on, delivering exceptional results.
           </p>
         </div>
-        <button className="btn btn-primary">Hire Me</button>
+        <button className="btn btn-primary">Get In Touch</button>
       </div>
       <div className="hero--section--img">
         <img src="./img/hero_img.jpg" alt="Hero Section" />

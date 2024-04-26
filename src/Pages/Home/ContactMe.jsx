@@ -1,14 +1,31 @@
+import React from 'react';
+import emailjs from 'emailjs-com';
+
 export default function ContactMe() {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+      .then((result) => {
+        console.log(result.text);
+        // Optionally, you can reset the form after successful submission
+        e.target.reset();
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
+
   return (
     <section id="Contact" className="contact--section">
       <div>
         <p className="sub--title">Get In Touch</p>
         <h2>Contact Me</h2>
         <p className="text-lg">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, odit.
+          Please Enter Your Details
         </p>
       </div>
-      <form className="contact--form--container">
+      <form className="contact--form--container" onSubmit={handleSubmit}>
         <div className="container">
           <label htmlFor="first-name" className="contact--label">
             <span className="text-md">First Name</span>
@@ -41,7 +58,7 @@ export default function ContactMe() {
             />
           </label>
           <label htmlFor="phone-number" className="contact--label">
-            <span className="text-md">phone-number</span>
+            <span className="text-md">Phone Number</span>
             <input
               type="text"
               className="contact--input text-md"
@@ -51,15 +68,14 @@ export default function ContactMe() {
             />
           </label>
         </div>
-        <label htmlFor="choode-topic" className="contact--label">
+        <label htmlFor="choose-topic" className="contact--label">
           <span className="text-md">Choose a topic</span>
           <select id="choose-topic" className="contact--input text-md">
             <option>Select One...</option>
             <option>Project timeline and milestones</option>
             <option>Budget and cost estimation</option>
             <option>Documentation and training provisions</option>
-            <option>Scalability and performance considerations
-</option>
+            <option>Scalability and performance considerations</option>
           </select>
         </label>
         <label htmlFor="message" className="contact--label">
@@ -71,12 +87,12 @@ export default function ContactMe() {
             placeholder="Type your message..."
           />
         </label>
-        <label htmlFor="checkboc" className="checkbox--label">
+        <label htmlFor="checkbox" className="checkbox--label">
           <input type="checkbox" required name="checkbox" id="checkbox" />
           <span className="text-sm">I accept the terms</span>
         </label>
         <div>
-          <button className="btn btn-primary contact--form--btn">Submit</button>
+          <button type="submit" className="btn btn-primary contact--form--btn">Submit</button>
         </div>
       </form>
     </section>
