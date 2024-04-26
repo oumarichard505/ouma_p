@@ -53,21 +53,21 @@
       {
         "id": "1",
         "count": "5",
-        "src": "./img/avatar-image.png",
+        "src": "./img/jo.png",
         "description": "Working with Richard has been a game-changer. His expertise, professionalism, and dedication have consistently delivered exceptional results, exceeding our expectations. Richard's innovative solutions and reliable communication make him an invaluable asset to any project.",
         "author_name": "Joseph Odera"
       },
       {
         "id": "2",
         "count": "5",
-        "src": "./img/avatar-image-1.png",
+        "src": "./img/vb.png",
         "description": "Partnering with this talented professional has been a transformative experience. Her dedication, expertise, and proactive approach have significantly enhanced our projects. Her ability to understand and meet our needs makes her an invaluable asset. I highly recommend her for any endeavor.",
         "author_name": "Valeria Bosibori"
             },
       {
         "id": "3",
         "count": "5",
-        "src": "./img/avatar-image-2.png",
+        "src": "./img/jm.png",
         "description":"I am incredibly impressed by the expertise and dedication of the individual I had the pleasure of collaborating with. Her innovative solutions and attention to detail have consistently exceeded our expectations. She brings a unique perspective and valuable insights to every project.",
         "author_name": "James Maina"
       
